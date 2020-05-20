@@ -24,11 +24,11 @@ import (
 
 func main() {
   _ = wechaty.NewWechaty().
-    OnScan(func(qrCode, status string) {
+    OnScan(func(qrCode string, status schemas.ScanStatus, data string) {
       fmt.Printf("Scan QR Code to login: %s\nhttps://api.qrserver.com/v1/create-qr-code/?data=%s\n", status, qrCode)
     }).
-    OnLogin(func(user string) { fmt.Printf("User %s logined\n", user) }).
-    OnMessage(func(message string) { fmt.Printf("Message: %s\n", message) }).
+    OnLogin(user *user.ContactSelf) { fmt.Printf("User %s logined\n", user) }).
+    OnMessage(message *user.Message) { fmt.Printf("Message: %s\n", message) }).
     Start()
 }
 ```
