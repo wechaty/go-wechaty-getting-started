@@ -5,6 +5,8 @@ Go Wechaty Starter Project Template that Works Out-of-the-Box
 ![Go Version](https://img.shields.io/github/go-mod/go-version/wechaty/go-wechaty)
 [![Go](https://github.com/wechaty/go-wechaty/workflows/Go/badge.svg)](https://github.com/wechaty/go-wechaty/actions?query=workflow%3AGo)
 
+![Go Wechaty](https://wechaty.github.io/go-wechaty/images/go-wechaty.png)
+
 ## Connecting Chatbots
 
 [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-brightgreen.svg)](https://github.com/Wechaty/wechaty)
