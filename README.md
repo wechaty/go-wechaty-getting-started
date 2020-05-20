@@ -45,6 +45,8 @@ make install
 
 ## Run
 
+Get a Token for your Bot first. Learn more from our [Wechaty Developers Program](https://github.com/wechaty/wechaty/wiki/Wechaty-Developer-Program)
+
 ```sh
 make bot
 ```
