@@ -1,9 +1,9 @@
 # go-wechaty-getting-started
 
-Go Wechaty Starter Project Template that Works Out-of-the-Box
-
 ![Go Version](https://img.shields.io/github/go-mod/go-version/wechaty/go-wechaty)
 [![Go](https://github.com/wechaty/go-wechaty-getting-started/workflows/Go/badge.svg)](https://github.com/wechaty/go-wechaty-getting-started/actions?query=workflow%3AGo)
+
+Go Wechaty Starter Project Template that Works Out-of-the-Box
 
 ![Go Wechaty](https://wechaty.github.io/go-wechaty/images/go-wechaty.png)
 
