@@ -8,3 +8,7 @@ install:
 .PHONY: bot
 bot:
 	go run examples/ding-dong-bot.go
+
+.PHONY: test
+test:
+	go build -o ding-dong-bot -v ./examples/ding-dong-bot.go
