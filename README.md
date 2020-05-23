@@ -57,6 +57,10 @@ make bot
 - [Java Wechaty Getting Started](https://github.com/wechaty/java-wechaty-getting-started)
 - [Go Wechaty Getting Started](https://github.com/wechaty/go-wechaty-getting-started)
 
+## Maintainers
+
+[@wechaty/go](https://github.com/orgs/wechaty/teams/go/members)
+
 ## Copyright & License
 
 - Code & Docs © 2020-now Wechaty <https://github.com/wechaty>
