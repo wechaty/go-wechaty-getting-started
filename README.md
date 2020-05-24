@@ -1,6 +1,8 @@
 # go-wechaty-getting-started ![Go Version](https://img.shields.io/github/go-mod/go-version/wechaty/go-wechaty) [![Go](https://github.com/wechaty/go-wechaty-getting-started/workflows/Go/badge.svg)](https://github.com/wechaty/go-wechaty-getting-started/actions?query=workflow%3AGo)
 
-![Go Wechaty](https://wechaty.github.io/go-wechaty/images/go-wechaty.png)
+[![Go Wechaty](https://wechaty.github.io/go-wechaty/images/go-wechaty.png)](https://github.com/wechaty/go-wechaty-getting-started)
+
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/wechaty/go-wechaty-getting-started) 
 
 Go Wechaty Starter Project Template that Works Out-of-the-Box
 
