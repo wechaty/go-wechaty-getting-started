@@ -3,7 +3,7 @@
 [![Go Wechaty](https://wechaty.github.io/go-wechaty/images/go-wechaty.png)](https://github.com/wechaty/go-wechaty-getting-started)
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/wechaty/go-wechaty-getting-started) 
-[![Go Playground](https://img.shields.io/badge/Go-Playground-blue)(https://play.golang.org/p/JGw_2TrVQeg)
+[![Go Playground](https://img.shields.io/badge/Go-Playground-blue)](https://play.golang.org/p/JGw_2TrVQeg)
 
 Go Wechaty Starter Project Template that Works Out-of-the-Box
 
