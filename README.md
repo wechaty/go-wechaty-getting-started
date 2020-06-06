@@ -4,6 +4,7 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/wechaty/go-wechaty-getting-started) 
 [![Go Playground](https://img.shields.io/badge/Go-Playground-blue)](https://play.golang.org/p/JGw_2TrVQeg)
+[![Wechaty in Go](https://img.shields.io/badge/Wechaty-Go-7de)](https://github.com/wechaty/go-wechaty)
 
 Go Wechaty Starter Project Template that Works Out-of-the-Box
 
@@ -59,6 +60,14 @@ make bot
 - [Python Wechaty Getting Started](https://github.com/wechaty/python-wechaty-getting-started)
 - [Java Wechaty Getting Started](https://github.com/wechaty/java-wechaty-getting-started)
 - [Go Wechaty Getting Started](https://github.com/wechaty/go-wechaty-getting-started)
+
+## Badge
+
+[![Wechaty in Go](https://img.shields.io/badge/Wechaty-Go-7de)](https://github.com/wechaty/go-wechaty)
+
+```md
+[![Wechaty in Go](https://img.shields.io/badge/Wechaty-Go-7de)](https://github.com/wechaty/go-wechaty)
+```
 
 ## Maintainers
 
