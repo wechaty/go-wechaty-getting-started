@@ -51,6 +51,8 @@ make install
 Get a Token for your Bot first. Learn more from our [Wechaty Developers Program](https://github.com/wechaty/wechaty/wiki/Wechaty-Developer-Program)
 
 ```sh
+export WECHATY_PUPPET_HOSTIE_TOKEN=your_token_at_here
+
 make bot
 ```
 

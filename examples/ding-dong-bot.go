@@ -21,7 +21,6 @@ package main
 import (
 	"fmt"
 	"github.com/wechaty/go-wechaty/wechaty"
-	wp "github.com/wechaty/go-wechaty/wechaty-puppet"
 	"github.com/wechaty/go-wechaty/wechaty-puppet/schemas"
 	"github.com/wechaty/go-wechaty/wechaty/user"
 	"log"
@@ -31,9 +30,7 @@ import (
 )
 
 func main() {
-	var bot = wechaty.NewWechaty(wechaty.WithPuppetOption(&wp.Option{
-		Token: "",
-	}))
+	var bot = wechaty.NewWechaty()
 
 	bot.OnScan(func(qrCode string, status schemas.ScanStatus, data string) {
 		fmt.Printf("Scan QR Code to login: %v\nhttps://api.qrserver.com/v1/create-qr-code/?data=%s\n", status, qrCode)
@@ -81,12 +78,12 @@ func onMessage(message *user.Message) {
 	}
 	log.Println("REPLY: dong")
 
-	//	// 2. reply image(qrcode image)
-	//	fileBox, _ := file_box.NewFileBoxFromUrl("https://wechaty.github.io/wechaty/images/bot-qr-code.png", "", nil)
-	//	_, err = message.SayFile(fileBox)
-	//	if err != nil {
-	//		log.Println(err)
-	//		return
-	//	}
-	//	log.Printf("REPLY: %s\n", fileBox)
+	// 2. reply image(qrcode image)
+	//fileBox, _ := file_box.FromUrl("https://wechaty.github.io/wechaty/images/bot-qr-code.png", "", nil)
+	//_, err = message.Say(fileBox)
+	//if err != nil {
+	//	log.Println(err)
+	//	return
+	//}
+	//log.Printf("REPLY: %s\n", fileBox)
 }
