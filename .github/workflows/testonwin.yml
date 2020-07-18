@@ -79,4 +79,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build Dingdongbot
-      run: go build .\examples\dingdongbot.go
+      run: make install
