@@ -79,4 +79,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build Dingdongbot
-      run: make install
+      run: |
+        go vet ./...
+        make install
+        make test
