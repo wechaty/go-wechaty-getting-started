@@ -1,16 +1,12 @@
-# This is a basic workflow to help you get started with Actions
 
 name: Update Dependencies and Test on Windows
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   UpdateDep:
     name: Update Dependency
@@ -22,7 +18,6 @@ jobs:
     - name: Setup Go environment
       uses: actions/setup-go@v2.1.0
       with:
-        # The Go version to download (if necessary) and use. Supports semver spec and ranges.
         go-version: 1.14.4 # optional
     - name: Update Dependency
       env:
@@ -59,14 +54,12 @@ jobs:
           [1]: https://github.com/peter-evans/create-pull-request
         branch: update-dependencies
 
-
   Build:
     name: Build on Windows
     needs: UpdateDep
-    # The type of runner that the job will run on
+    # Test on Windows
     runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -74,10 +67,8 @@ jobs:
     - name: Setup Go environment
       uses: actions/setup-go@v2.1.0
       with:
-        # The Go version to download (if necessary) and use. Supports semver spec and ranges.
         go-version: 1.14.4 # optional
 
-    # Runs a single command using the runners shell
     - name: Build Dingdongbot
       run: |
         go vet ./...

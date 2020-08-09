@@ -5,6 +5,9 @@ on:
     branches: [ master, debug ]
   pull_request:
     branches: [ master ]
+  repository_dispatch:
+    # go-wechaty updated
+    types: [ updatedeps ]
 
 jobs:
   build:
