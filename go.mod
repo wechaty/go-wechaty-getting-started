@@ -9,9 +9,11 @@ require (
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e // indirect
 	github.com/wechaty/go-grpc v0.17.1 // indirect
 	github.com/wechaty/go-wechaty v0.1.2
+	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
 	golang.org/x/net v0.0.0-20200822124328-c89045814202 // indirect
 	golang.org/x/sys v0.0.0-20200824131525-c12d262b63d8 // indirect
 	golang.org/x/text v0.3.3 // indirect
+	golang.org/x/tools v0.0.0-20200823205832-c024452afbcd // indirect
 	google.golang.org/genproto v0.0.0-20200815001618-f69a88009b70 // indirect
 	google.golang.org/grpc v1.31.0 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
