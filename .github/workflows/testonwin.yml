@@ -25,15 +25,11 @@ jobs:
     - name: Update Dependency
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        mv go.mod go.mod.bak
-        go mod init github.com/wechaty/go-wechaty-getting-started
-        go mod tidy
+      run: go get -u ./...
 
     - name: Verify Defference
       run: |
         echo "Verifying"
-        go get -u ./...
         make install
         make test
 
