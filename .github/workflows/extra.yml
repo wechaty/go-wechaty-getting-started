@@ -20,11 +20,16 @@ jobs:
       with:
         go-version: 1.14.4 # optional
     - name: Update Dependency
+<<<<<<< HEAD
+=======
+      if: ${{ ! endsWith(${{ github.ref }}, 'update-dependencies') }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> 103dcd0... Test conditional execution
       run: go get -u ./...
 
-    - name: Verify Defference
+    - name: Test
       run: |
-        echo "Verifying"
         make install
         make test
 
