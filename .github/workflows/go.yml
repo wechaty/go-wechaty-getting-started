@@ -41,8 +41,8 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v1.1.0
         with:
-          username: nebell
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           registry: docker.pkg.github.com
-          repository: nebell/go-wechaty-getting-started/dingdongbot
+          repository: wechaty/go-wechaty-getting-started/dingdongbot
           tag_with_ref: true
