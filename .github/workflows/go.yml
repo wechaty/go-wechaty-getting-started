@@ -45,5 +45,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: nebell/go-wechaty-getting-started/dingdongbot
+          repository: wechaty/go-wechaty-getting-started/dingdongbot
           tag_with_ref: true
