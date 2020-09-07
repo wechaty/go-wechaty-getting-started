@@ -1,5 +1,10 @@
-FROM golang
-COPY . go_wechaty_examples
+FROM golang AS builder
+WORKDIR /root/
+COPY . src
 ENV GOPROXY https://goproxy.io,direct
-RUN cd go_wechaty_examples && make test
-ENTRYPOINT ./go_wechaty_examples/ding-dong-bot
+RUN cd src && CGO_ENABLED=0 GOOS=linux go build -o ding-dong-bot -v ./examples/ding-dong-bot.go
+
+FROM alpine AS prod
+WORKDIR /root/
+COPY --from=builder /root/src/ding-dong-bot .
+ENTRYPOINT ["./ding-dong-bot"]
