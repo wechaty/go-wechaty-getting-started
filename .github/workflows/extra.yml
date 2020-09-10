@@ -10,6 +10,7 @@ on:
 jobs:
   UpdateDep:
     name: Update Dependency
+    if: false == endsWith(github.ref, 'update-dependencies')
     runs-on: ubuntu-latest
     steps: 
     - name: Checkout
@@ -20,6 +21,9 @@ jobs:
       with:
         go-version: 1.14.4 # optional
     - name: Update Dependency
+      if: ${{ ! endsWith(${{ github.ref }}, 'update-dependencies') }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: go get -u ./...
 
     - name: Test
