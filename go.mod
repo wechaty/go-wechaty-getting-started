@@ -2,7 +2,6 @@ module github.com/wechaty/go-wechaty-getting-started
 
 go 1.14
 
-<<<<<<< HEAD
 require (
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/maruel/rs v1.0.0 // indirect
@@ -19,7 +18,3 @@ require (
 	google.golang.org/grpc v1.31.1 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 )
-=======
-require github.com/wechaty/go-wechaty v0.1.2
-
->>>>>>> 103dcd0... Test conditional execution
