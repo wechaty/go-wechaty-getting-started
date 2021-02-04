@@ -20,20 +20,21 @@ package main
 
 import (
 	"fmt"
-	"github.com/wechaty/go-wechaty/wechaty"
-	"github.com/wechaty/go-wechaty/wechaty-puppet/schemas"
-	"github.com/wechaty/go-wechaty/wechaty/user"
 	"log"
 	"os"
 	"os/signal"
 	"time"
+
+	"github.com/wechaty/go-wechaty/wechaty"
+	"github.com/wechaty/go-wechaty/wechaty-puppet/schemas"
+	"github.com/wechaty/go-wechaty/wechaty/user"
 )
 
 func main() {
 	var bot = wechaty.NewWechaty()
 
 	bot.OnScan(func(qrCode string, status schemas.ScanStatus, data string) {
-		fmt.Printf("Scan QR Code to login: %v\nhttps://wechaty.github.io/qrcode/%s\n", status, qrCode)
+		fmt.Printf("Scan QR Code to login: %v\nhttps://wechaty.js.org/qrcode/%s\n", status, qrCode)
 	}).OnLogin(func(user *user.ContactSelf) {
 		fmt.Printf("User %s logined\n", user.Name())
 	}).OnMessage(onMessage).OnLogout(func(user *user.ContactSelf, reason string) {
@@ -65,8 +66,8 @@ func onMessage(message *user.Message) {
 		log.Println("Message discarded because its TOO OLD(than 2 minutes)")
 	}
 
-	if message.Type() != schemas.MessageTypeText || message.Text() != "#ding" {
-		log.Println("Message discarded because it does not match #ding")
+	if message.Type() != schemas.MessageTypeText || message.Text() != "ding" {
+		log.Println("Message discarded because it does not match 'ding'")
 		return
 	}
 
