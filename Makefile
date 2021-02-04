@@ -11,4 +11,8 @@ bot:
 
 .PHONY: test
 test:
-	go build -o ding-dong-bot -v ./examples/ding-dong-bot.go
+	go build -o examples/ding-dong-bot -v ./examples/ding-dong-bot.go
+
+.PHONY: clean
+clean:
+	rm -f examples/ding-dong-bot
