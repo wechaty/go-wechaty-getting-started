@@ -26,13 +26,13 @@ import (
 )
 
 func main() {
-  _ = wechaty.NewWechaty().
-    OnScan(func(qrCode string, status schemas.ScanStatus, data string) {
-      fmt.Printf("Scan QR Code to login: %s\nhttps://wechaty.github.io/qrcode/%s\n", status, qrCode)
-    }).
-    OnLogin(user *user.ContactSelf) { fmt.Printf("User %s logined\n", user) }).
-    OnMessage(message *user.Message) { fmt.Printf("Message: %s\n", message) }).
-    Start()
+	_ = wechaty.NewWechaty().
+		OnScan(func(ctx *wechaty.Context, qrCode string, status schemas.ScanStatus, data string) {
+			fmt.Printf("Scan QR Code to login: %s\nhttps://wechaty.github.io/qrcode/%s\n", status, qrCode)
+		}).
+		OnLogin(func(ctx *wechaty.Context, user *user.ContactSelf) { fmt.Printf("User %s logined\n", user) }).
+		OnMessage(func(ctx *wechaty.Context, message *user.Message) { fmt.Printf("Message: %s\n", message) }).
+		Start()
 }
 ```
 
@@ -51,7 +51,7 @@ make install
 Get a Token for your Bot first. Learn more from our [Wechaty Developers Program](https://github.com/wechaty/wechaty/wiki/Wechaty-Developer-Program)
 
 ```sh
-export WECHATY_PUPPET_HOSTIE_TOKEN=your_token_at_here
+export WECHATY_PUPPET_SERVICE_TOKEN=your_token_at_here
 
 make bot
 ```
