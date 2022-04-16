@@ -21,8 +21,6 @@ package main
 import (
 	"fmt"
 	"log"
-	"os"
-	"os/signal"
 	"time"
 
 	"github.com/wechaty/go-wechaty/wechaty"
@@ -41,18 +39,7 @@ func main() {
 		fmt.Printf("User %s logouted: %s\n", user, reason)
 	})
 
-	var err = bot.Start()
-	if err != nil {
-		panic(err)
-	}
-
-	var quitSig = make(chan os.Signal)
-	signal.Notify(quitSig, os.Interrupt, os.Kill)
-
-	select {
-	case <-quitSig:
-		log.Fatal("exit.by.signal")
-	}
+	bot.DaemonStart()
 }
 
 func onMessage(ctx *wechaty.Context, message *user.Message) {
