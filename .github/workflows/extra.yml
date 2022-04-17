@@ -16,9 +16,9 @@ jobs:
     - name: Setup Go environment
       uses: actions/setup-go@v1
       with:
-        go-version: 1.14.4 # optional
+        go-version: 1.18.0 # optional
     - name: Update Dependency
-      run: go get github.com/wechaty/go-wechaty
+      run: go get -u github.com/wechaty/go-wechaty
 
     - name: Test
       run: |
