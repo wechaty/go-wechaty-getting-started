@@ -3,7 +3,7 @@ all: install bot
 
 .PHONY: install
 install:
-	go get -u golang.org/x/lint/golint
+	go install golang.org/x/lint/golint@latest
 
 .PHONY: bot
 bot:

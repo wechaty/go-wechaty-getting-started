@@ -12,30 +12,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set up Go 1.14
+    - name: Set up Go 1.18
       uses: actions/setup-go@v1
       with:
-        go-version: 1.14
+        go-version: 1.18
       id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Get dependencies
-      run: go vet ./...
-
     - name: Install dependencies
       run: make install
 
+    - name: Go Vet
+      run: |
+        go mod download
+        go vet ./...
+
     - name: Go Test
       run: make test
-  
+
   push:
     name: Push Docker image to Github Packages
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name != 'pull_request'
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
 
