@@ -23,5 +23,6 @@ jobs:
     - name: Build Dingdongbot
       run: |
         make install
+        go mod download
         go vet ./...
         make test

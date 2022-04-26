@@ -25,7 +25,9 @@ jobs:
       run: make install
 
     - name: Go Vet
-      run: go vet ./...
+      run: |
+        go mod download
+        go vet ./...
 
     - name: Go Test
       run: make test
