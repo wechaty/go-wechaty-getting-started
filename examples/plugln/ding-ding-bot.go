@@ -120,10 +120,7 @@ func PlugOne() *wechaty.Plugin {
 	return newPlug
 }
 
-/*
-	PlugTwo (The Second Plug-in)
-	func PlugTwo(msg string) *wechaty.Plugin {}
-*/
+// PlugTwo (The Second Plug-in)
 func PlugTwo(args string) *wechaty.Plugin {
 	newPlug := wechaty.NewPlugin()
 
