@@ -1,7 +1,0 @@
-Ding:
-  SECRET: xxxxxxxxxxxxxxxxxxxxx
-  TOKEN: xxxxxxxxxxxxxxxxxxxxx
-  ## KeyWord: 用户名, ID （ 请在钉钉内部设置！）
-WECHATY:
-  ENDPOINT: xxxxxxxxxxxxxxxxxxxxx
-  TOKEN: xxxxxxxxxxxxxxxxxxxxx
