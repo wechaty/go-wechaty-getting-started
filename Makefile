@@ -18,5 +18,3 @@ test:
 clean:
 	rm -f examples/ding-dong-bot
 	rm -f examples/plugln/ding-ding-bot
-
- .PHONY: test
