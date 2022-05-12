@@ -53,7 +53,7 @@ func onMessage(ctx *wechaty.Context, message *user.Message) {
 		log.Println("Message discarded because its TOO OLD(than 2 minutes)")
 	}
 
-	if message.Type() != schemas.MessageTypeText || message.Text() != "ding" {
+	if message.Type() != schemas.MessageTypeText || message.Text() != "#ding" {
 		log.Println("Message discarded because it does not match 'ding'")
 		return
 	}
