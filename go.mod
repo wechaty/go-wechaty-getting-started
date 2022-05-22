@@ -2,7 +2,7 @@ module github.com/wechaty/go-wechaty-getting-started
 
 go 1.18
 
-require github.com/wechaty/go-wechaty v0.4.3
+require github.com/wechaty/go-wechaty v0.4.4
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
