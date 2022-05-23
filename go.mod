@@ -2,7 +2,10 @@ module github.com/wechaty/go-wechaty-getting-started
 
 go 1.18
 
-require github.com/wechaty/go-wechaty v0.4.4
+require (
+	github.com/mdp/qrterminal/v3 v3.0.0
+	github.com/wechaty/go-wechaty v0.4.4
+)
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
@@ -22,4 +25,5 @@ require (
 	google.golang.org/genproto v0.0.0-20220407144326-9054f6ed7bac // indirect
 	google.golang.org/grpc v1.45.0 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
+	rsc.io/qr v0.2.0 // indirect
 )

@@ -20,7 +20,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/mdp/qrterminal/v3"
 	"log"
+	"net/url"
+	"os"
 	"time"
 
 	"github.com/wechaty/go-wechaty/wechaty"
@@ -33,9 +36,7 @@ var err error
 func main() {
 	var bot = wechaty.NewWechaty()
 
-	bot.OnScan(func(context *wechaty.Context, qrCode string, status schemas.ScanStatus, data string) {
-		fmt.Printf("Scan QR Code to login: %v\nhttps://wechaty.js.org/qrcode/%s\n", status, qrCode)
-	}).OnLogin(func(context *wechaty.Context, user *user.ContactSelf) {
+	bot.OnScan(onScan).OnLogin(func(context *wechaty.Context, user *user.ContactSelf) {
 		fmt.Printf("User %s logined\n", user.Name())
 	}).OnLogout(func(ctx *wechaty.Context, user *user.ContactSelf, reason string) {
 		fmt.Printf("User %s logouted: %s\n", user, reason)
@@ -150,4 +151,15 @@ func PlugTwo(args string) *wechaty.Plugin {
 		log.Println("PlugTwo OnMessage Here!")
 	})
 	return newPlug
+}
+
+func onScan(ctx *wechaty.Context, qrCode string, status schemas.ScanStatus, data string) {
+	if status == schemas.ScanStatusWaiting || status == schemas.ScanStatusTimeout {
+		qrterminal.GenerateHalfBlock(qrCode, qrterminal.L, os.Stdout)
+
+		qrcodeImageUrl := fmt.Sprintf("https://wechaty.js.org/qrcode/%s", url.QueryEscape(qrCode))
+		fmt.Printf("onScan: %s - %s\n", status, qrcodeImageUrl)
+		return
+	}
+	fmt.Printf("onScan: %s\n", status)
 }
