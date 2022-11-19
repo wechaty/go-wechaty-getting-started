@@ -88,8 +88,8 @@ github.com/tuotoo/qrcode v0.0.0-20190222102259-ac9c44189bf2/go.mod h1:lPnW9HVS0v
 github.com/urfave/cli v1.22.1/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtXRu0=
 github.com/wechaty/go-grpc v1.5.2 h1:bQ4txCuc2UROj6KfxcC7Dt7st0+1tKR3CPDJiR8oNAI=
 github.com/wechaty/go-grpc v1.5.2/go.mod h1:gtyrRa9Ts5KGzQh61CIytAYyE9HmVna6yFRamKN4udk=
-github.com/wechaty/go-wechaty v0.4.7 h1:h6vIEDVLyMfqdI6jGxYQt9p3zmY4qOY+iOr0x6EJHXo=
-github.com/wechaty/go-wechaty v0.4.7/go.mod h1:0599Rrvv5UKHUF6/EjSgCPoKELm+W9Sy749axYKxUoQ=
+github.com/wechaty/go-wechaty v0.4.9 h1:TO66WcYtjQQT+tBuRF7VvJeVngg4sOFDY1D9MhwxhAM=
+github.com/wechaty/go-wechaty v0.4.9/go.mod h1:0599Rrvv5UKHUF6/EjSgCPoKELm+W9Sy749axYKxUoQ=
 github.com/willf/bitset v1.1.10 h1:NotGKqX0KwQ72NUzqrjZq5ipPNDQex9lo3WpaS8L2sc=
 go.opentelemetry.io/proto/otlp v0.7.0/go.mod h1:PqfVotwruBrMGOCsRd/89rSnXhoiJIqeYNgFYFoEGnI=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
