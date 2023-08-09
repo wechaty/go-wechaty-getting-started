@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/mdp/qrterminal/v3 v3.0.0
-	github.com/wechaty/go-wechaty v0.4.9
+	github.com/wechaty/go-wechaty v0.4.10
 )
 
 require (
